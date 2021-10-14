@@ -1,0 +1,74 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url('../fonts/#{$file_name}.woff') format('woff'),
+			url('../fonts/#{$file_name}.woff2') format('woff2');
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+// ========================================
+
+body {
+	overflow-x: hidden;
+}
+
+// ========================================
+
+// * {
+// 	border: 1px rgb(211, 211, 211) solid;
+// }
+
+// ========================================
+
+.title {
+	font-family: Open Sans;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 27px;
+	letter-spacing: 0.1875px;
+	color: #48555b;
+
+	&_blue {
+		color: #00a4e5;
+	}
+
+	&_white {
+		color: #fff;
+		font-size: 24px;
+	}
+
+	&_black {
+		font-size: 30px;
+		line-height: 36px;
+		letter-spacing: 0.15px;
+		color: #48555b;
+	}
+}
+.subtitle {
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 23px;
+	color: #48555b;
+}
+.btn {
+	width: 150px;
+	height: 40px;
+	background: #00a4e5;
+
+	font-family: Open Sans;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+	color: #ffffff;
+	transition: 0.3s;
+
+	&:hover {
+		background: #154355;
+	}
+}

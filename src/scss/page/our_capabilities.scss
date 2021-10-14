@@ -1,0 +1,136 @@
+.our-capabilities {
+	display: grid;
+	grid-template: 1fr / 1fr 9fr 1fr;
+	margin-top: 120px;
+	// ========================================
+
+	&__inner {
+		grid-column: 2 / 3;
+	}
+
+	// ========================================
+
+	&__header {
+		display: grid;
+
+		@media (min-width: 850px) {
+			grid-template: 1fr / 1fr 1fr 1fr;
+		}
+	}
+	&__list {
+		display: grid;
+		margin-top: 80px;
+		column-gap: 5%;
+
+		@media (min-width: 880px) {
+			grid-template: 1fr / 1fr 1fr 1fr;
+		}
+	}
+
+	// ========================================
+
+	&__title {
+		display: flex;
+		flex-direction: column;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 50px;
+			height: 2px;
+			background: #00a4e5;
+			margin-top: 10px;
+		}
+
+		@media (max-width: 850px) {
+			align-items: center;
+			margin-top: 20px;
+		}
+	}
+	&__subtitle {
+		text-align: justify;
+		padding: 0 2%;
+
+		@media (max-width: 850px) {
+			text-align: center;
+			margin-top: 20px;
+			padding: 0;
+		}
+	}
+	&__btn {
+		display: flex;
+		justify-content: flex-end;
+
+		@media (max-width: 850px) {
+			justify-content: center;
+			margin-top: 20px;
+		}
+	}
+
+	// ========================================
+
+	.o-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border: 1px solid #cccccc;
+		padding: 38px 22px;
+
+		&__ico {
+			width: 65px;
+			height: auto;
+		}
+
+		&__title {
+			margin-top: 20px;
+		}
+
+		&__subtitle {
+			margin-top: 12px;
+		}
+
+		@media (max-width: 1473px) {
+			&__title {
+				& h2 {
+					font-size: 16px;
+				}
+			}
+
+			&__subtitle {
+				font-size: 11px;
+			}
+		}
+		@media (max-width: 1217px) {
+			&__title {
+				& h2 {
+					font-size: 13px;
+				}
+			}
+		}
+		@media (max-width: 996px) {
+			&__title {
+				& h2 {
+					font-size: 11.1px;
+				}
+			}
+		}
+		@media (max-width: 880px) {
+			margin-top: 30px;
+			&__ico {
+				margin: 0 auto;
+			}
+
+			&__title {
+				& h2 {
+					text-align: center;
+					font-size: 18px;
+				}
+			}
+
+			&__subtitle {
+				text-align: center;
+				font-size: 13px;
+			}
+		}
+	}
+}

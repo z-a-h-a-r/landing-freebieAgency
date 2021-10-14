@@ -1,0 +1,66 @@
+.header {
+	padding: 24px 0;
+	display: grid;
+	grid-template: 1fr / 1fr 9fr 1fr;
+	border-bottom: 1px solid #ccc;
+	// ========================================================
+
+	&__inner {
+		grid-column: 2 / 3;
+		display: grid;
+		grid-template: 1fr / 2fr 8fr;
+	}
+	&__logo {
+		font-family: bebas-neue-by-fontfabric, sans-serif;
+		font-size: 16px;
+		line-height: 12px;
+		letter-spacing: 2px;
+
+		display: flex;
+		align-items: end;
+	}
+	&__menu {
+		& ul {
+			display: grid;
+			grid-template: 1fr / repeat(5, 1fr);
+
+			& li {
+				font-family: Open Sans;
+				font-weight: 600;
+				font-size: 12px;
+				letter-spacing: 1px;
+				color: #48555b;
+				text-align: end;
+
+				& span {
+					transition: 0.3s;
+					cursor: pointer;
+				}
+				& span:hover {
+					color: #00a4e5;
+				}
+			}
+
+			@media (max-width: 756px) {
+				display: none;
+			}
+		}
+	}
+
+	&__burger {
+		display: grid;
+		justify-content: end;
+
+		& span {
+			display: block;
+			width: 25px;
+			height: 2px;
+			background: rgb(0, 0, 0);
+			margin-bottom: 4px;
+		}
+
+		@media (min-width: 756px) {
+			display: none;
+		}
+	}
+}
